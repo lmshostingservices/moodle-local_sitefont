@@ -1,0 +1,296 @@
+/**
+ * Change Site Font - Global typography styles
+ *
+ * Uses !important to override theme styles (themes use high specificity)
+ *
+ * @package    local_sitefont
+ * @copyright  2025 AI Grader
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/* Base body styles - override all themes */
+body,
+body.path-admin,
+body.path-mod,
+body.pagelayout-admin,
+body.pagelayout-standard,
+body.pagelayout-course,
+body.pagelayout-incourse,
+body.pagelayout-frontpage,
+body.pagelayout-mydashboard,
+body.pagelayout-login,
+body.pagelayout-popup,
+body.pagelayout-report,
+body.pagelayout-embedded {
+    font-family: var(--site-font-family) !important;
+    font-size: var(--site-body-size) !important;
+    font-weight: var(--site-body-weight) !important;
+    line-height: var(--site-line-height) !important;
+}
+
+/* All text elements - exclude icons */
+p, span:not(.fa):not(.fas):not(.far):not(.fab):not(.fal):not(.fad):not(.icon):not([class*="fa-"]),
+div:not(.fa):not(.icon), li, td, th, label, legend,
+.text-muted, .text-info, .text-warning, .text-danger, .text-success,
+.small, .lead, .display-1, .display-2, .display-3, .display-4 {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Headings - override all themes */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.page-header-headings,
+.page-header-headings h1,
+.page-title,
+.activity-header h1,
+.course-content h2,
+.section-title,
+.card-title,
+.modal-title,
+#page-header h1,
+#page-header .page-header-headings,
+.frontpage-content h2,
+.block .card-title,
+.block .header,
+.block_title h2 {
+    font-family: var(--site-font-family) !important;
+    font-weight: var(--site-heading-weight) !important;
+    line-height: 1.25 !important;
+}
+
+/* Heading sizes with scale */
+h1, .h1 { font-size: calc(2rem * var(--site-heading-scale)) !important; }
+h2, .h2 { font-size: calc(1.6rem * var(--site-heading-scale)) !important; }
+h3, .h3 { font-size: calc(1.3rem * var(--site-heading-scale)) !important; }
+h4, .h4 { font-size: calc(1.1rem * var(--site-heading-scale)) !important; }
+h5, .h5 { font-size: calc(1rem * var(--site-heading-scale)) !important; }
+h6, .h6 { font-size: calc(0.9rem * var(--site-heading-scale)) !important; }
+
+/* Form elements */
+.btn,
+.form-control,
+.form-select,
+.form-check-label,
+input,
+select,
+textarea,
+button:not(.fa):not([class*="fa-"]),
+.dropdown-item,
+.dropdown-menu,
+.custom-select {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Navigation */
+.nav-link,
+.nav-item,
+.navbar-nav,
+.breadcrumb-item,
+.breadcrumb-item a,
+#page-navbar .breadcrumb,
+.secondary-navigation,
+.secondary-navigation .nav-link,
+.primary-navigation,
+.primary-navigation .nav-link,
+.moremenu .nav-link,
+.navigation .nav-link,
+#usernavigation,
+.usermenu {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Admin and settings pages - text elements only, not icons */
+.adminpagetitle,
+.form-defaultinfo,
+.form-description,
+.form-label,
+.form-setting,
+.form-item,
+.admin_colheader,
+.admintable td,
+.admintable th,
+.generaltable td,
+.generaltable th,
+.mform .fitem,
+.mform .fitemtitle,
+.mform .felement,
+#adminsettings label,
+#adminsettings p,
+#adminsettings span:not(.fa):not(.fas):not(.far):not(.fab):not(.icon):not([class*="fa-"]),
+#adminsettings div:not(.fa):not(.icon),
+.settingsform label,
+.settingsform p,
+.settingsform span:not(.fa):not(.fas):not(.far):not(.fab):not(.icon):not([class*="fa-"]) {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Tables */
+table,
+.table,
+.generaltable,
+.admintable,
+.flexible,
+.table td,
+.table th {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Alerts and messages */
+.alert,
+.toast,
+.notification,
+.message {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Cards and blocks */
+.card,
+.card-body,
+.card-header,
+.card-footer,
+.block,
+.block_content,
+.block-content,
+.block .content {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Content areas */
+#page,
+#page-content,
+#region-main,
+#region-main-box,
+.course-content,
+.activity-information,
+.mod-description,
+.contentnode,
+.content-area,
+.activity-wrapper {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Footer */
+.footer-content,
+#page-footer,
+.footer,
+.logininfo {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Modal and popups */
+.modal,
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-footer,
+.popover,
+.popover-body,
+.tooltip,
+.tooltip-inner {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Drawer navigation (Moodle 4+) */
+.drawer,
+.drawer-content,
+.drawercontent,
+[data-region="drawer"],
+.courseindex,
+.courseindex-item {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Activity modules */
+.activity,
+.activityname,
+.activityinstance,
+.activity-item,
+.contentwithoutlink,
+.contentafterlink {
+    font-family: var(--site-font-family) !important;
+}
+
+/* Quiz and assignment */
+.que,
+.qtext,
+.answer,
+.outcome,
+.formulation,
+.feedback,
+.rightanswer,
+.submissionstatustable,
+.gradingform {
+    font-family: var(--site-font-family) !important;
+}
+
+/* ============================================
+   ICON FONT PRESERVATION - MUST BE LAST
+   Restore FontAwesome and icon fonts
+   ============================================ */
+
+/* FontAwesome icons - all versions */
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+.fad,
+.icon,
+i.fa,
+i.fas,
+i.far,
+i.fab,
+i.fal,
+i.fad,
+i.icon,
+i[class*="fa-"],
+span.fa,
+span.fas,
+span.far,
+span.fab,
+span[class*="fa-"],
+.fa::before,
+.fas::before,
+.far::before,
+.fab::before,
+i::before,
+[class*="fa-"]::before {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome", fontawesome !important;
+}
+
+/* FontAwesome brands */
+.fab,
+i.fab,
+span.fab {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands", "FontAwesome" !important;
+}
+
+/* Moodle help icons and question marks */
+.helptooltip,
+.helptooltip .icon,
+.helptooltip i,
+a[data-toggle="popover"] i,
+a[data-toggle="popover"] .icon,
+.form-text .icon,
+.form-text i.fa,
+.btn .fa,
+.btn .fas,
+.btn .far,
+.btn .icon,
+.btn i[class*="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome", fontawesome !important;
+}
+
+/* Notification and UI icons */
+.popover-region .icon,
+.popover-region i,
+.usermenu .icon,
+.usermenu i,
+#usernavigation .icon,
+#usernavigation i.fa,
+.navbar .icon,
+.navbar i.fa,
+.nav-link .icon,
+.nav-link i.fa {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome", fontawesome !important;
+}
